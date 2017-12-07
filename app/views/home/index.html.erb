@@ -1,158 +1,75 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title> AFX Dance </title>
-		<link rel="icon" type="image/png" href="assets/images/arrow.png">
-		<link rel="stylesheet" href="assets/css/style.css">
-		<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400" rel="stylesheet">
-		<script src="https://use.fontawesome.com/ece40e76f3.js"></script>
-	</head>
+  <head>
+    <title> AFX Dance </title>
+    <link rel="icon" type="image/png" href="assets/images/arrow.png">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400" rel="stylesheet">
+    <script src="https://use.fontawesome.com/ece40e76f3.js"></script>
+  </head>
 
-	<body>
+  <body>
 
-		<div class="banner">
-			<!-- <img class="icon" src="assets/images/afx2.png">  -->
-			<%= image_tag "afx2.png", :class => "icon" %>
-		</div>
-		
-		<div class="about">
-			<div class="about--text">
-				AFX Dance is a hip hop/urban dance group founded by Ping Quach, Geoffrey Chen, and Rosemary Hua in Fall 2011 to give dancers an opportunity to grow. 
-				<br>
-				<br>
-				Our name, [A]spirations, [F]amily, e[X]perience reflects our philosophy of creating a family environment for dancers to build up the confidence and support to reach new heights. With Competition (competitive advanced), Project (intermediate-advanced), and Training (beginner) levels, we hope to provide dancers, choreographers, and directors with new, fulfilling experiences that will empower them to pass on our philosophies to the greater community.
-			</div>
-			
-			<div class="social-media">
-				<a href="https://www.facebook.com/AFXdance/">
-					<i class="fa fa-facebook" aria-hidden="true"></i>
-				</a>
-				<a href="https://www.instagram.com/afxdance/">
-					<i class="fa fa-instagram" aria-hidden="true"></i>
-				</a>
-				<a href="https://www.youtube.com/channel/UCfqDntI9j7VESB0fNgw9Yog">
-					<i class="fa fa-youtube-play" aria-hidden="true"></i>
-				</a>
-			</div>
-		</div>
+    <div class="banner">
+      <!-- <img class="icon" src="assets/images/afx2.png">  -->
+      <%= image_tag "afx2.png", :class => "icon" %>
+    </div>
+    
+    <div class="about">
+      <div class="about--text">
+        <p> AFX Dance is a hip hop/urban dance group founded by Ping Quach, Geoffrey Chen, and Rosemary Hua in Fall 2011 to give dancers an opportunity to grow. </p>
+        
+        <p> Our name, [A]spirations, [F]amily, e[X]perience reflects our philosophy of creating a family environment for dancers to build up the confidence and support to reach new heights. With Competition (competitive advanced), Project (intermediate-advanced), and Training (beginner) levels, we hope to provide dancers, choreographers, and directors with new, fulfilling experiences that will empower them to pass on our philosophies to the greater community. </p>
+      </div>
+      
+      <div class="social-media">
+        <a href="https://www.facebook.com/AFXdance/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/afxdance/">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCfqDntI9j7VESB0fNgw9Yog">
+          <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
 
-		<div class="board">
-			<div class="board--title"> 
-				AFX BOARD
-			</div>
-			
-			<div class="board--subtitle"> 
-				SUMMER/FALL '17
-			</div>
-			
-			<div class="board--row">
-				<div class="board--member">
-					<img class="board--img" src="assets/images/jeffrey.jpg">
-					<div class="overlay">
-						<div class="member-info">
-							<div class="name">Jeffrey Wang</div>
-							<div class="title">Executive Director</div>
-							<div class="bio">squatting and squinting</div>
-						</div>
-					</div>
-				</div>
-				<div class="board--member">
-					<img class="board--img" src="assets/images/meimei.jpg">
-					<div class="overlay">
-						<div class="member-info">
-							<div class="name">Mei Mei</div>
-							<div class="title">Executive Director</div>
-							<div class="bio">haha</div>
-						</div>
-					</div>
-				</div>
-				<div class="board--member">
-					<img class="board--img" src="assets/images/kirk.jpg">
-					<div class="overlay">
-						<div class="member-info">
-							<div class="name">Kirk La</div>
-							<div class="title">Vice Executive</div>
-							<div class="bio">blurb</div>
-						</div>
-					</div>
-				</div>
-				<div class="board--member">
-					<img class="board--img" src="assets/images/stephanie.jpg">
-					<div class="overlay">
-						<div class="member-info">
-							<div class="name">Stephanie Kim</div>
-							<div class="title">Vice Executive</div>
-							<div class="bio">artsy</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="board--row">
-				<div class="board--member">
-					<img class="board--img" src="assets/images/annie.jpg">
-					<div class="overlay">
-						<div class="member-info">
-							<div class="name">Annie Wang</div>
-							<div class="title">Events Chair</div>
-							<div class="bio">loud</div>
+    <% Semester.all.each do |semester| %>
+      <% Group.all.each do |group| %>
+        <% if group.semester_id == semester.id %>
 
-						</div>
-					</div>
-				</div>
-				<div class="board--member">
-					<img class="board--img" src="assets/images/helen.jpg">
-					<div class="overlay">
-						<div class="member-info">
-							<div class="name">Helen Li</div>
-							<div class="title">Events Chair</div>
-							<div class="bio">:)</div>
-						</div>
-					</div>
-				</div>
-				<div class="board--member">
-					<img class="board--img" src="assets/images/chloe.jpg">
-					<div class="overlay">
-						<div class="member-info">
-							<div class="name">Chloe Ding</div>
-							<div class="title">Events Chair</div>
-							<div class="bio">:)</div>
-						</div>
-					</div>
-				</div>
-				<div class="board--member">
-					<img class="board--img" src="assets/images/aileen.jpg">
-					<div class="overlay">
-						<div class="member-info">
-							<div class="name">Aileen Gui</div>
-							<div class="title">Events Chair</div>
-							<div class="bio">:)</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="board--row">
-				<div class="board--member">
-					<img class="board--img" src="assets/images/nolan.jpg">
-					<div class="overlay">
-						<div class="member-info">
-							<div class="name">Nolan Pokpongkiat</div>
-							<div class="title">Finance Chair</div>
-							<div class="bio">:)</div>
-						</div>
-					</div>
-				</div>
-				<div class="board--member">
-					<img class="board--img" src="assets/images/angie.jpg">
-					<div class="overlay">
-						<div class="member-info">
-							<div class="name">Angie Liao</div>
-							<div class="title">Finance Chair</div>
-							<div class="bio">:)</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
+          <div class="board">
+            <div class="board--title">
+              <%= group.title %>
+            </div>
+            
+            <div class="board--subtitle"> 
+              <%= semester.name %>
+            </div>
+
+            <div class="board--row">
+              <% Position.all.each do |position| %>
+                <% if group.id == position.group_id %>
+                  <div class="board--member">
+                    <%= image_tag Person.find(position.person_id).name + ".jpg", :class => "board--img" %>
+                    <div class="overlay">
+                      <div class="member-info">
+                        <div class="name"><%= Person.find(position.person_id).name %></div>
+                        <div class="title"><%= position.title %></div>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    
+  </body>
 </html>
