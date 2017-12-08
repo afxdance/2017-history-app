@@ -39,15 +39,20 @@ gem 'pundit'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  # Use SQLite only in development and testing
+  gem 'sqlite3'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
 
 group :development do
+  # Use PostgreSQL in production (Heroku)
+  gem 'pg'
+
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
