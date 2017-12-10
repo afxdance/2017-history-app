@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400" rel="stylesheet">
     <script src="https://use.fontawesome.com/ece40e76f3.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.1.0/particles.min.js"></script>
   </head>
 
   <body>
@@ -16,14 +15,14 @@
         <!-- <img class="icon" src="assets/images/afx2.png">  -->
         <%= image_tag "afx2.png", :class => "icon" %>
       </div>
-      
+
       <div class="about">
         <div class="about--text">
           <p> <strong>AFX Dance</strong> is a hip hop/urban dance group founded by Ping Quach, Geoffrey Chen, and Rosemary Hua in Fall 2011 to give dancers an opportunity to grow. </p>
-          
+
           <p> Our name, <strong>[A]spirations, [F]amily, e[X]perience</strong> reflects our philosophy of creating a family environment for dancers to build up the confidence and support to reach new heights. With <strong>Competition</strong> (competitive advanced), <strong>Project</strong> (intermediate-advanced), and <strong>Training</strong> (beginner) levels, we hope to provide dancers, choreographers, and directors with new, fulfilling experiences that will empower them to pass on our philosophies to the greater community. </p>
         </div>
-        
+
         <div class="social-media">
           <a href="https://www.facebook.com/AFXdance/">
             <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -37,7 +36,7 @@
         </div>
       </div>
     </div>
-    
+
 
     <% Semester.all.each do |semester| %>
       <% Group.all.each do |group| %>
@@ -47,8 +46,8 @@
             <div class="board--title">
               <%= group.title %>
             </div>
-            
-            <div class="board--subtitle"> 
+
+            <div class="board--subtitle">
               <%= semester.name %>
             </div>
 
@@ -73,6 +72,6 @@
       <% end %>
     <% end %>
 
-    
+
   </body>
 </html>
