@@ -56,5 +56,5 @@ group :production do
   # Use PostgreSQL in production (Heroku)
   gem 'pg'
   # Heroku-specific production settings
-  gem 'rails_12factor'
+  gem 'rails_12factor', group: :production
 end
